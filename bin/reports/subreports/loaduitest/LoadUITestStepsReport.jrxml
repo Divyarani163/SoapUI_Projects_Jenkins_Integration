@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+	name="LoadUITestStepsReport" language="groovy" pageWidth="535" pageHeight="842" columnWidth="535" leftMargin="0" rightMargin="0"
+	topMargin="0" bottomMargin="0">
+	<template>"../../styles.jrtx"</template>
+	<parameter name="TestCaseName" class="java.lang.String">
+		<property name="interactive" value="false"/>
+		<property name="label" value="Test Case Name"/>
+		<parameterDescription>The name of the test case</parameterDescription>
+	</parameter>
+	<field name="testStepName" class="java.lang.String"/>
+    <field name="minTimeTaken" class="java.lang.String"/>
+    <field name="maxTimeTaken" class="java.lang.String"/>
+    <field name="averageTimeTaken" class="java.lang.String"/>
+    <field name="testLastTime" class="java.lang.String"/>
+    <field name="transactionCount" class="java.lang.String"/>
+    <field name="tPS" class="java.lang.String"/>
+    <field name="failedAssertionsCount" class="java.lang.String"/>
+    <field name="failedRatio" class="java.lang.Double"/>
+	<columnHeader>
+		<band height="48">
+			<textField>
+				<reportElement positionType="Float" x="0" y="0" width="535" height="20"/>
+				<box bottomPadding="0">
+					<pen lineStyle="Double"/>
+					<topPen lineStyle="Double"/>
+					<leftPen lineStyle="Double"/>
+					<bottomPen lineStyle="Double"/>
+					<rightPen lineStyle="Double"/>
+				</box>
+				<textElement>
+					<font size="14"/>
+                </textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{TestCaseName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="ColumnHeader" x="0" y="30" width="95" height="14"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+                <text>Test step</text>
+			</staticText>
+			<staticText>
+				<reportElement style="ColumnHeader" x="95" y="30" width="50" height="14"/>
+					<textElement textAlignment="Right">
+						<font isBold="true"/>
+					</textElement>
+					<text>Min (ms)</text>
+			</staticText>
+			<staticText>
+				<reportElement style="ColumnHeader" x="145" y="30" width="55" height="14"/>
+					<textElement textAlignment="Right">
+						<font isBold="true"/>
+					</textElement>
+					<text>Max (ms)</text>
+			</staticText>
+			<staticText>
+				<reportElement style="ColumnHeader" x="200" y="30" width="75" height="14"/>
+					<textElement textAlignment="Right">
+						<font isBold="true"/>
+					</textElement>
+					<text>Median (ms)</text>
+			</staticText>
+			<staticText>
+				<reportElement style="ColumnHeader" x="275" y="30" width="60" height="14"/>
+					<textElement textAlignment="Right">
+						<font isBold="true"/>
+					</textElement>
+					<text>Last (ms)</text>
+			</staticText>
+			<staticText>
+				<reportElement style="ColumnHeader" x="335" y="30" width="50" height="14"/>
+					<textElement textAlignment="Right">
+						<font isBold="true"/>
+					</textElement>
+					<text>Count</text>
+			</staticText>
+			<staticText>
+				<reportElement style="ColumnHeader" x="385" y="30" width="50" height="14"/>
+					<textElement textAlignment="Right">
+						<font isBold="true"/>
+					</textElement>
+					<text>TPS</text>
+			</staticText>
+			<staticText>
+				<reportElement style="ColumnHeader" x="435" y="30" width="50" height="14"/>
+					<textElement textAlignment="Right">
+						<font isBold="true"/>
+					</textElement>
+					<text>Err</text>
+			</staticText>
+			<staticText>
+				<reportElement style="ColumnHeader" x="485" y="30" width="50" height="14"/>
+					<textElement textAlignment="Right">
+						<font isBold="true"/>
+					</textElement>
+					<text>Err %</text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Prevent">
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="95" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String">$F{testStepName}</textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="95" y="0" width="50" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.String">$F{minTimeTaken}</textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="145" y="0" width="55" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.String">$F{maxTimeTaken}</textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="75" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.String">$F{averageTimeTaken}</textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="275" y="0" width="60" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.String">$F{testLastTime}</textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="335" y="0" width="50" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.String">$F{transactionCount}</textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="385" y="0" width="50" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.String">$F{tPS}</textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="435" y="0" width="50" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.String">$F{failedAssertionsCount}</textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="485" y="0" width="50" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.String">String.format(Locale.defaultLocale, "%.1f", $F{failedRatio})</textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

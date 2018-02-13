@@ -1,0 +1,11 @@
+# install4j response file for ReadyAPI 2.2.0
+executeLauncherAction$Boolean=true
+installTestServer$Boolean=true
+sys.adminRights$Boolean=true
+sys.component.1150$Boolean=true
+sys.component.1154$Boolean=true
+sys.component.132$Boolean=true
+sys.component.1429$Boolean=true
+sys.installationDir=C\:\\Program Files\\SmartBear\\ReadyAPI-2.2.0
+sys.installationTypeId=6710
+sys.languageId=en
