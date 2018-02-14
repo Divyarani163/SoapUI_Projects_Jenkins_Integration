@@ -1,1 +1,1 @@
-SoapUIAutomation.bat PRD_FF.xml
+SoapUIAutomation_Local.bat PRD_FF.xml
