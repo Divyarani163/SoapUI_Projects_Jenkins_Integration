@@ -1,1 +1,0 @@
-SoapUIAutomation.bat PRD_FF.xml
