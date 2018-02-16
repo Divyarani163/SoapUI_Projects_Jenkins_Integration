@@ -6,6 +6,6 @@ echo %xml%
 echo %current_dir%
 set current_date_time=%DATE%
 echo %DATE%
-%current_dir%\bin\testrunner.bat -f%current_dir%\bin\API_Automation_Reports -FPDF "-RProject Report_%DATE%" "-E%var%" -I "%current_dir%\bin\API_AutomationProjects_ReadyAPI\%xml%"
+%current_dir%\bin\testrunner.bat -f%current_dir%\bin\API_Automation_Reports -FPDF -R"JUnit-Style HTML Report%DATE%" "-E%var%" -I "%current_dir%\bin\API_AutomationProjects_ReadyAPI\%xml%"
 
 
