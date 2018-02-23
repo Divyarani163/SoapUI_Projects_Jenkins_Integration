@@ -62,7 +62,7 @@
   <con:entry key="Domain" value=""/>
   <con:entry key="Tool Args" value=""/>
   <con:entry key="Save Project" value="false"/>
-</xml-fragment>]]></con:setting><con:setting id="Port">8081</con:setting><con:setting id="IncludeOverview">true</con:setting><con:setting id="IncludeResults">true</con:setting><con:setting id="FlowLayout">false</con:setting><con:setting id="ErrorDetails">true</con:setting><con:setting id="IncludeCoverage">true</con:setting><con:setting id="GeneratableJUnitReport@Style">Multiple Pages</con:setting><con:setting id="GeneratableJUnitReport@Folder">C:\Users\drapolu\Desktop\Suites Exported</con:setting><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.ProTestRunnerUIAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+</xml-fragment>]]></con:setting><con:setting id="Port">8081</con:setting><con:setting id="IncludeOverview">true</con:setting><con:setting id="IncludeResults">true</con:setting><con:setting id="FlowLayout">false</con:setting><con:setting id="ErrorDetails">true</con:setting><con:setting id="IncludeCoverage">true</con:setting><con:setting id="GeneratableJUnitReport@Style">Single Page (Print)</con:setting><con:setting id="GeneratableJUnitReport@Folder">C:\Users\drapolu\Desktop\Suites Exported</con:setting><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.ProTestRunnerUIAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
   <con:entry key="Report Format(s)" value=""/>
   <con:entry key="Host:Port" value=""/>
   <con:entry key="Export JUnit Results" value="true"/>
@@ -72,7 +72,7 @@
   <con:entry key="WSS Password Type" value=""/>
   <con:entry key="TestSuite" value="&lt;all>"/>
   <con:entry key="Endpoint" value=""/>
-  <con:entry key="Select Report Type" value="JUnit-Style HTML Report"/>
+  <con:entry key="Select Report Type" value="Data Export"/>
   <con:entry key="System Properties" value=""/>
   <con:entry key="Run in-process" value="false"/>
   <con:entry key="Password" value=""/>
